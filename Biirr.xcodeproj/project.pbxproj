@@ -17,6 +17,7 @@
 		522B245425E6819D009DED71 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245325E6819D009DED71 /* WebService.swift */; };
 		522B245825E68E85009DED71 /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245725E68E85009DED71 /* BeerService.swift */; };
 		522B246125E6931D009DED71 /* Beers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B246025E6931D009DED71 /* Beers.swift */; };
+		522B246825E6DEEF009DED71 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B246725E6DEEF009DED71 /* Resources.swift */; };
 		FB3C4969AA51901CAEBDE083 /* Pods_Biirr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22826E163614A9D42DBA7732 /* Pods_Biirr.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		522B245325E6819D009DED71 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		522B245725E68E85009DED71 /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
 		522B246025E6931D009DED71 /* Beers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beers.swift; sourceTree = "<group>"; };
+		522B246725E6DEEF009DED71 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		95E08939DD91CBE33A7CFFFE /* Pods-Biirr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biirr.release.xcconfig"; path = "Target Support Files/Pods-Biirr/Pods-Biirr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 			children = (
 				522B245325E6819D009DED71 /* WebService.swift */,
 				522B245725E68E85009DED71 /* BeerService.swift */,
+				522B246725E6DEEF009DED71 /* Resources.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				522B243425E67860009DED71 /* AppDelegate.swift in Sources */,
 				522B243625E67860009DED71 /* SceneDelegate.swift in Sources */,
 				522B246125E6931D009DED71 /* Beers.swift in Sources */,
+				522B246825E6DEEF009DED71 /* Resources.swift in Sources */,
 				522B245425E6819D009DED71 /* WebService.swift in Sources */,
 				522B245025E67BCE009DED71 /* Constants.swift in Sources */,
 			);

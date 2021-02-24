@@ -8,12 +8,6 @@
 import Foundation
 
 
-struct Resources<T> {
-    
-    let url:URL
-    let parse: (Data) ->T?
-}
-
 protocol IWebService{
     
     func load<T>(_ resource:Resources<T> ,completion:@escaping (T?) ->() )

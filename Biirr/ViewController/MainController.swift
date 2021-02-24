@@ -16,8 +16,10 @@ final class MainController: UIViewController {
         super.viewDidLoad()
   
         beerService = BeerService(webService)
-        
-        beerService.getAllBears()
+    
+        beerService.getAllBears { (beers) in
+            print(beers)
+        }
 
     }
 

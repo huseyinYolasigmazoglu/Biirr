@@ -10,7 +10,7 @@ import Foundation
 protocol IBeerService {
     var webService : IWebService { get set }
     var url:URL { get set }
-    func getAllBears()
+    func getAllBears(completion:@escaping (Beers?) ->())
 }
 
 class BeerService  : IBeerService {
@@ -23,20 +23,27 @@ class BeerService  : IBeerService {
         self.webService = service
     }
     
-    func getAllBears(){
+    func getAllBears(completion:@escaping (Beers?) ->()){
         
         
         if let resource = getResource() {
             
             webService.load(resource) { (data) in
                 
-                print(data)
+                if let data = data {
+                    DispatchQueue.main.async {
+                        completion(data)
+                    }
+                }
+                else{
+                    completion(nil)
+                }
             }
         }
-        
-        
+        else{
+            completion(nil)
+        }
     }
-    
     
     func getResource() -> Resources<Beers>? {
         
