@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		522B243B25E67860009DED71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522B243925E67860009DED71 /* Main.storyboard */; };
 		522B243D25E67862009DED71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522B243C25E67862009DED71 /* Assets.xcassets */; };
 		522B244025E67862009DED71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522B243E25E67862009DED71 /* LaunchScreen.storyboard */; };
+		522B245025E67BCE009DED71 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B244F25E67BCE009DED71 /* Constants.swift */; };
+		522B245425E6819D009DED71 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245325E6819D009DED71 /* WebService.swift */; };
+		522B245825E68E85009DED71 /* BearService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245725E68E85009DED71 /* BearService.swift */; };
 		FB3C4969AA51901CAEBDE083 /* Pods_Biirr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22826E163614A9D42DBA7732 /* Pods_Biirr.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		522B243C25E67862009DED71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522B243F25E67862009DED71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		522B244125E67862009DED71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522B244F25E67BCE009DED71 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		522B245325E6819D009DED71 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		522B245725E68E85009DED71 /* BearService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearService.swift; sourceTree = "<group>"; };
 		95E08939DD91CBE33A7CFFFE /* Pods-Biirr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biirr.release.xcconfig"; path = "Target Support Files/Pods-Biirr/Pods-Biirr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +69,8 @@
 		522B243225E67860009DED71 /* Biirr */ = {
 			isa = PBXGroup;
 			children = (
+				522B245225E6816B009DED71 /* Networking */,
+				522B244E25E67BBC009DED71 /* Utility */,
 				522B243325E67860009DED71 /* AppDelegate.swift */,
 				522B243525E67860009DED71 /* SceneDelegate.swift */,
 				522B243725E67860009DED71 /* MainController.swift */,
@@ -74,13 +82,29 @@
 			path = Biirr;
 			sourceTree = "<group>";
 		};
+		522B244E25E67BBC009DED71 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				522B244F25E67BCE009DED71 /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		522B245225E6816B009DED71 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				522B245325E6819D009DED71 /* WebService.swift */,
+				522B245725E68E85009DED71 /* BearService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		90F8190CE1F7E204D9DD244A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				04AE8BF3BC3040B9EDA86BBB /* Pods-Biirr.debug.xcconfig */,
 				95E08939DD91CBE33A7CFFFE /* Pods-Biirr.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,8 +231,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				522B243825E67860009DED71 /* MainController.swift in Sources */,
+				522B245825E68E85009DED71 /* BearService.swift in Sources */,
 				522B243425E67860009DED71 /* AppDelegate.swift in Sources */,
 				522B243625E67860009DED71 /* SceneDelegate.swift in Sources */,
+				522B245425E6819D009DED71 /* WebService.swift in Sources */,
+				522B245025E67BCE009DED71 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
