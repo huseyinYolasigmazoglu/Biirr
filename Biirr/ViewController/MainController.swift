@@ -18,7 +18,7 @@ final class MainController: UIViewController {
         beerService = BeerService(webService)
     
         beerService.getAllBears { (beers) in
-            print(beers)
+            print(beers?.data![0])
         }
 
     }

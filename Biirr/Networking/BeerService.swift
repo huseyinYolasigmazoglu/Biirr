@@ -22,9 +22,8 @@ class BeerService  : IBeerService {
     {
         self.webService = service
     }
-    
+    //note Return result here
     func getAllBears(completion:@escaping (Beers?) ->()){
-        
         
         if let resource = getResource() {
             
