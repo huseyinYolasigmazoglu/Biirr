@@ -15,7 +15,8 @@
 		522B244025E67862009DED71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522B243E25E67862009DED71 /* LaunchScreen.storyboard */; };
 		522B245025E67BCE009DED71 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B244F25E67BCE009DED71 /* Constants.swift */; };
 		522B245425E6819D009DED71 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245325E6819D009DED71 /* WebService.swift */; };
-		522B245825E68E85009DED71 /* BearService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245725E68E85009DED71 /* BearService.swift */; };
+		522B245825E68E85009DED71 /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245725E68E85009DED71 /* BeerService.swift */; };
+		522B246125E6931D009DED71 /* Beers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B246025E6931D009DED71 /* Beers.swift */; };
 		FB3C4969AA51901CAEBDE083 /* Pods_Biirr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22826E163614A9D42DBA7732 /* Pods_Biirr.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +33,8 @@
 		522B244125E67862009DED71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		522B244F25E67BCE009DED71 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		522B245325E6819D009DED71 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		522B245725E68E85009DED71 /* BearService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearService.swift; sourceTree = "<group>"; };
+		522B245725E68E85009DED71 /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
+		522B246025E6931D009DED71 /* Beers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beers.swift; sourceTree = "<group>"; };
 		95E08939DD91CBE33A7CFFFE /* Pods-Biirr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biirr.release.xcconfig"; path = "Target Support Files/Pods-Biirr/Pods-Biirr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,11 +71,12 @@
 		522B243225E67860009DED71 /* Biirr */ = {
 			isa = PBXGroup;
 			children = (
+				522B246425E69540009DED71 /* ViewController */,
+				522B245F25E69282009DED71 /* Model */,
 				522B245225E6816B009DED71 /* Networking */,
 				522B244E25E67BBC009DED71 /* Utility */,
 				522B243325E67860009DED71 /* AppDelegate.swift */,
 				522B243525E67860009DED71 /* SceneDelegate.swift */,
-				522B243725E67860009DED71 /* MainController.swift */,
 				522B243925E67860009DED71 /* Main.storyboard */,
 				522B243C25E67862009DED71 /* Assets.xcassets */,
 				522B243E25E67862009DED71 /* LaunchScreen.storyboard */,
@@ -94,9 +97,25 @@
 			isa = PBXGroup;
 			children = (
 				522B245325E6819D009DED71 /* WebService.swift */,
-				522B245725E68E85009DED71 /* BearService.swift */,
+				522B245725E68E85009DED71 /* BeerService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		522B245F25E69282009DED71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				522B246025E6931D009DED71 /* Beers.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		522B246425E69540009DED71 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				522B243725E67860009DED71 /* MainController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		90F8190CE1F7E204D9DD244A /* Pods */ = {
@@ -231,9 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				522B243825E67860009DED71 /* MainController.swift in Sources */,
-				522B245825E68E85009DED71 /* BearService.swift in Sources */,
+				522B245825E68E85009DED71 /* BeerService.swift in Sources */,
 				522B243425E67860009DED71 /* AppDelegate.swift in Sources */,
 				522B243625E67860009DED71 /* SceneDelegate.swift in Sources */,
+				522B246125E6931D009DED71 /* Beers.swift in Sources */,
 				522B245425E6819D009DED71 /* WebService.swift in Sources */,
 				522B245025E67BCE009DED71 /* Constants.swift in Sources */,
 			);

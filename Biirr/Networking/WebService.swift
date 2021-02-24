@@ -14,7 +14,12 @@ struct Resources<T> {
     let parse: (Data) ->T?
 }
 
-struct WebService {
+protocol IWebService{
+    
+    func load<T>(_ resource:Resources<T> ,completion:@escaping (T?) ->() )
+}
+
+class WebService : IWebService{
     
     func load<T>(_ resource:Resources<T> ,completion:@escaping (T?) ->() ) {
         
