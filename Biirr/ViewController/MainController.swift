@@ -20,20 +20,28 @@ final class MainController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        configureView()
+        getBeers()
         
-        
-        cellWidth =  (view.bounds.width - 15) 
-  
-        beerService = BeerService(webService)
+    }
     
+    private func getBeers(){
+        
+        beerService = BeerService(webService)
+        
         beerService.getAllBears { (beers) in
             
             self.beerListVM = BeerListViewModel(beers?.data)
             self.collectionView.reloadData()
             
         }
+    }
+    
+    private func configureView(){
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        cellWidth =  (view.bounds.width - 15)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -47,8 +55,6 @@ final class MainController: UIViewController{
                     if let index = sender as? IndexPath {
                         destination.beerVM = beerListVM?.getItemAtIndexPath(index)
                     }
-                    
-         
                     
                 }
                 
