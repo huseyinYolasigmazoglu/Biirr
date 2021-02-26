@@ -14,7 +14,7 @@ final class MainController: UIViewController{
     
     private var webService : IWebService = WebService()
     private var beerService: IBeerService!
-    
+    private var beerListVM : BeerListViewModel?
     private var cellWidth:CGFloat  = 100
     
     override func viewDidLoad() {
@@ -24,12 +24,15 @@ final class MainController: UIViewController{
         collectionView.delegate = self
         
         
-        cellWidth =  (view.bounds.width - 15) / 2
+        cellWidth =  (view.bounds.width - 15) 
   
         beerService = BeerService(webService)
     
         beerService.getAllBears { (beers) in
-            //print(beers?.data![0])
+            
+            self.beerListVM = BeerListViewModel(beers?.data)
+            self.collectionView.reloadData()
+            
         }
     }
 }
@@ -39,12 +42,19 @@ extension MainController : UICollectionViewDataSource, UICollectionViewDelegate 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 15
+        return self.beerListVM?.numberOfCounts() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "BeerCell", for: indexPath)
+        guard let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "BeerCell", for: indexPath) as? BeerCollectionViewCell else{
+            
+            fatalError("BeerCell as? BeerCollectionViewCell not found")
+        }
+        
+        cell.beer = beerListVM?.getItemAtIndexPath(indexPath)
+        
+        return cell
     }
     
     
@@ -52,10 +62,15 @@ extension MainController : UICollectionViewDataSource, UICollectionViewDelegate 
 
 extension MainController : UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: Constants.gotoDetailSegue, sender: indexPath)
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: cellWidth, height: cellWidth)
+        return CGSize(width: cellWidth, height: cellWidth * 1.2)
     }
     
 }

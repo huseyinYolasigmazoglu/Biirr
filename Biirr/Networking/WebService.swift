@@ -15,6 +15,7 @@ protocol IWebService{
 
 class WebService : IWebService{
     
+    //note Return result here
     func load<T>(_ resource:Resources<T> ,completion:@escaping (T?) ->() ) {
         
         URLSession.shared.dataTask(with: resource.url) { (data, responser, error) in

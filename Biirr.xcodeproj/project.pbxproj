@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52075FE825E8D7AE0091F130 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52075FE725E8D7AE0091F130 /* BeerCollectionViewCell.swift */; };
+		52075FEC25E8DCEF0091F130 /* BeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52075FEB25E8DCEF0091F130 /* BeerViewModel.swift */; };
+		52075FEF25E8DDCB0091F130 /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52075FEE25E8DDCB0091F130 /* BeerListViewModel.swift */; };
 		522B243425E67860009DED71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B243325E67860009DED71 /* AppDelegate.swift */; };
 		522B243625E67860009DED71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B243525E67860009DED71 /* SceneDelegate.swift */; };
 		522B243825E67860009DED71 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B243725E67860009DED71 /* MainController.swift */; };
@@ -24,6 +27,9 @@
 /* Begin PBXFileReference section */
 		04AE8BF3BC3040B9EDA86BBB /* Pods-Biirr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biirr.debug.xcconfig"; path = "Target Support Files/Pods-Biirr/Pods-Biirr.debug.xcconfig"; sourceTree = "<group>"; };
 		22826E163614A9D42DBA7732 /* Pods_Biirr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Biirr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52075FE725E8D7AE0091F130 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
+		52075FEB25E8DCEF0091F130 /* BeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewModel.swift; sourceTree = "<group>"; };
+		52075FEE25E8DDCB0091F130 /* BeerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModel.swift; sourceTree = "<group>"; };
 		522B243025E67860009DED71 /* Biirr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biirr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522B243325E67860009DED71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		522B243525E67860009DED71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,10 +61,28 @@
 		52075FE425E7D9F20091F130 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52075FE625E8D77D0091F130 /* Cell */,
 				522B243925E67860009DED71 /* Main.storyboard */,
 				522B243E25E67862009DED71 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		52075FE625E8D77D0091F130 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52075FE725E8D7AE0091F130 /* BeerCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		52075FEA25E8DC300091F130 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52075FEB25E8DCEF0091F130 /* BeerViewModel.swift */,
+				52075FEE25E8DDCB0091F130 /* BeerListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		522B242725E67860009DED71 = {
@@ -82,6 +106,7 @@
 		522B243225E67860009DED71 /* Biirr */ = {
 			isa = PBXGroup;
 			children = (
+				52075FEA25E8DC300091F130 /* ViewModel */,
 				522B243325E67860009DED71 /* AppDelegate.swift */,
 				522B243525E67860009DED71 /* SceneDelegate.swift */,
 				522B244125E67862009DED71 /* Info.plist */,
@@ -262,11 +287,14 @@
 			files = (
 				522B243825E67860009DED71 /* MainController.swift in Sources */,
 				522B245825E68E85009DED71 /* BeerService.swift in Sources */,
+				52075FE825E8D7AE0091F130 /* BeerCollectionViewCell.swift in Sources */,
 				522B243425E67860009DED71 /* AppDelegate.swift in Sources */,
 				522B243625E67860009DED71 /* SceneDelegate.swift in Sources */,
 				522B246125E6931D009DED71 /* Beers.swift in Sources */,
+				52075FEC25E8DCEF0091F130 /* BeerViewModel.swift in Sources */,
 				522B246825E6DEEF009DED71 /* Resources.swift in Sources */,
 				522B245425E6819D009DED71 /* WebService.swift in Sources */,
+				52075FEF25E8DDCB0091F130 /* BeerListViewModel.swift in Sources */,
 				522B245025E67BCE009DED71 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

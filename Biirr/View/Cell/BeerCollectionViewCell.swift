@@ -6,7 +6,42 @@
 //
 
 import UIKit
+import SDWebImage
 
-class BeerCollectionViewCell: UICollectionViewCell {
+final class BeerCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet private  weak var beerName: UILabel!
+    
+    @IBOutlet weak var beerCategory: UILabel!
+    
+    @IBOutlet weak var beerImage: UIImageView!
+    
+    
+    
+    var beer:BeerViewModel? {
+        
+        didSet {
+            if let beer  = beer {
+                
+                beerName.text = beer.getBeerName()
+                beerCategory.text = beer.getCategory()
+                
+                if let image = beer.getListDisplayImage()
+                {
+                    beerImage.sd_setImage(with: image)
+                }
+
+                
+            }
+            
+        }
+    }
+    
+    
+    override func prepareForReuse() {
+        
+        beerImage.sd_cancelCurrentImageLoad()
+    }
+    
     
 }
