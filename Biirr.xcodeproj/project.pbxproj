@@ -52,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52075FE425E7D9F20091F130 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				522B243925E67860009DED71 /* Main.storyboard */,
+				522B243E25E67862009DED71 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		522B242725E67860009DED71 = {
 			isa = PBXGroup;
 			children = (
@@ -73,16 +82,15 @@
 		522B243225E67860009DED71 /* Biirr */ = {
 			isa = PBXGroup;
 			children = (
+				522B243325E67860009DED71 /* AppDelegate.swift */,
+				522B243525E67860009DED71 /* SceneDelegate.swift */,
+				522B244125E67862009DED71 /* Info.plist */,
+				522B243C25E67862009DED71 /* Assets.xcassets */,
+				52075FE425E7D9F20091F130 /* View */,
 				522B246425E69540009DED71 /* ViewController */,
 				522B245F25E69282009DED71 /* Model */,
 				522B245225E6816B009DED71 /* Networking */,
 				522B244E25E67BBC009DED71 /* Utility */,
-				522B243325E67860009DED71 /* AppDelegate.swift */,
-				522B243525E67860009DED71 /* SceneDelegate.swift */,
-				522B243925E67860009DED71 /* Main.storyboard */,
-				522B243C25E67862009DED71 /* Assets.xcassets */,
-				522B243E25E67862009DED71 /* LaunchScreen.storyboard */,
-				522B244125E67862009DED71 /* Info.plist */,
 			);
 			path = Biirr;
 			sourceTree = "<group>";
