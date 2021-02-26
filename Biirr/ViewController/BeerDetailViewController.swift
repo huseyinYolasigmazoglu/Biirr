@@ -16,6 +16,7 @@ final class BeerDetailViewController: UIViewController {
     @IBOutlet private weak var name: UILabel!
     @IBOutlet private weak var category: UILabel!
     @IBOutlet private weak var explanation: UITextView!
+    @IBOutlet private weak var smooth: UILabel!
     
     var beerVM : BeerViewModel?
     
@@ -32,20 +33,16 @@ final class BeerDetailViewController: UIViewController {
             name.text = beerVM.getBeerName()
             category.text = beerVM.getCategory()
             explanation.text = beerVM.getDescription()
-            
+            smooth.text = beerVM.getBitter()
         }
-        
-        
     }
     
 }
 
 extension BeerDetailViewController: UITextViewDelegate {
     
-    
-    
     private func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-    
-            return false
+        
+        return false
     }
 }

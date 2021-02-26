@@ -10,6 +10,8 @@ import UIKit
 final class MainController: UIViewController{
     
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var webService : IWebService = WebService()
@@ -29,15 +31,18 @@ final class MainController: UIViewController{
         
         beerService = BeerService(webService)
         
-        beerService.getAllBears { (beers) in
+        beerService.getAllBears { [weak self] beers in
             
-            self.beerListVM = BeerListViewModel(beers?.data)
-            self.collectionView.reloadData()
-            
+            self?.beerListVM = BeerListViewModel(beers?.data)
+            self?.collectionView.reloadData()
+            self?.activityIndicator.stopAnimating()
         }
     }
     
     private func configureView(){
+        
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -57,7 +62,6 @@ final class MainController: UIViewController{
                     }
                     
                 }
-                
             }
         }
     }

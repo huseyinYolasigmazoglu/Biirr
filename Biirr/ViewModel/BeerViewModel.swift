@@ -41,4 +41,30 @@ struct BeerViewModel {
         
         return beer.style?.description ?? ""
     }
+    
+    func getBitter() -> String {
+        
+        if let ibu = beer.ibu {
+            
+            let value = Int(ibu) ?? 0
+            if value == 0 {
+                return ""
+            }
+            else if value <= 20{
+                return "Smooth"
+            }
+            else if value <= 50 {
+                return "Bitter"
+            }
+            else {
+                return "Hipster Plus"
+            }
+            
+        }
+        else {
+            return ""
+        }
+        
+       
+    }
 }
