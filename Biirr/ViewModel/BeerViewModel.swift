@@ -27,8 +27,18 @@ struct BeerViewModel {
         return beer.labels?.large
     }
     
+    func getDetailImage() -> URL? {
+        
+        return beer.labels?.large
+    }
+    
     func getCategory() -> String {
         
         return beer.style?.category?.name ?? ""
+    }
+    
+    func getDescription() -> String {
+        
+        return beer.style?.description ?? ""
     }
 }

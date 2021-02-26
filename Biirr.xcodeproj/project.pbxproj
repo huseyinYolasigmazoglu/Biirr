@@ -10,6 +10,10 @@
 		52075FE825E8D7AE0091F130 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52075FE725E8D7AE0091F130 /* BeerCollectionViewCell.swift */; };
 		52075FEC25E8DCEF0091F130 /* BeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52075FEB25E8DCEF0091F130 /* BeerViewModel.swift */; };
 		52075FEF25E8DDCB0091F130 /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52075FEE25E8DDCB0091F130 /* BeerListViewModel.swift */; };
+		52075FF325E967A30091F130 /* BeerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52075FF225E967A30091F130 /* BeerDetailViewController.swift */; };
+		52075FFF25E968AC0091F130 /* Pods_Biirr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22826E163614A9D42DBA7732 /* Pods_Biirr.framework */; };
+		5207600025E968AC0091F130 /* Pods_Biirr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22826E163614A9D42DBA7732 /* Pods_Biirr.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5207600325E970350091F130 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207600225E970350091F130 /* UIImageView+Extension.swift */; };
 		522B243425E67860009DED71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B243325E67860009DED71 /* AppDelegate.swift */; };
 		522B243625E67860009DED71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B243525E67860009DED71 /* SceneDelegate.swift */; };
 		522B243825E67860009DED71 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B243725E67860009DED71 /* MainController.swift */; };
@@ -21,8 +25,21 @@
 		522B245825E68E85009DED71 /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245725E68E85009DED71 /* BeerService.swift */; };
 		522B246125E6931D009DED71 /* Beers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B246025E6931D009DED71 /* Beers.swift */; };
 		522B246825E6DEEF009DED71 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B246725E6DEEF009DED71 /* Resources.swift */; };
-		FB3C4969AA51901CAEBDE083 /* Pods_Biirr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22826E163614A9D42DBA7732 /* Pods_Biirr.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5207600125E968AC0091F130 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5207600025E968AC0091F130 /* Pods_Biirr.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04AE8BF3BC3040B9EDA86BBB /* Pods-Biirr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biirr.debug.xcconfig"; path = "Target Support Files/Pods-Biirr/Pods-Biirr.debug.xcconfig"; sourceTree = "<group>"; };
@@ -30,6 +47,8 @@
 		52075FE725E8D7AE0091F130 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		52075FEB25E8DCEF0091F130 /* BeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewModel.swift; sourceTree = "<group>"; };
 		52075FEE25E8DDCB0091F130 /* BeerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModel.swift; sourceTree = "<group>"; };
+		52075FF225E967A30091F130 /* BeerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailViewController.swift; sourceTree = "<group>"; };
+		5207600225E970350091F130 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		522B243025E67860009DED71 /* Biirr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biirr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522B243325E67860009DED71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		522B243525E67860009DED71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB3C4969AA51901CAEBDE083 /* Pods_Biirr.framework in Frameworks */,
+				52075FFF25E968AC0091F130 /* Pods_Biirr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				522B244F25E67BCE009DED71 /* Constants.swift */,
+				5207600225E970350091F130 /* UIImageView+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -150,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				522B243725E67860009DED71 /* MainController.swift */,
+				52075FF225E967A30091F130 /* BeerDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -183,6 +204,7 @@
 				522B242D25E67860009DED71 /* Frameworks */,
 				522B242E25E67860009DED71 /* Resources */,
 				816FD60D6F35EE104A9E232B /* [CP] Embed Pods Frameworks */,
+				5207600125E968AC0091F130 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				522B243825E67860009DED71 /* MainController.swift in Sources */,
+				52075FF325E967A30091F130 /* BeerDetailViewController.swift in Sources */,
+				5207600325E970350091F130 /* UIImageView+Extension.swift in Sources */,
 				522B245825E68E85009DED71 /* BeerService.swift in Sources */,
 				52075FE825E8D7AE0091F130 /* BeerCollectionViewCell.swift in Sources */,
 				522B243425E67860009DED71 /* AppDelegate.swift in Sources */,
@@ -450,6 +474,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.huseyinYolasigmazoglu.Biirr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -470,6 +495,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.huseyinYolasigmazoglu.Biirr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

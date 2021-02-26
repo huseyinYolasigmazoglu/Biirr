@@ -35,6 +35,26 @@ final class MainController: UIViewController{
             
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let identifier = segue.identifier {
+            
+            if identifier == Constants.gotoDetailSegue {
+                
+                if let destination = segue.destination as? BeerDetailViewController{
+                    
+                    if let index = sender as? IndexPath {
+                        destination.beerVM = beerListVM?.getItemAtIndexPath(index)
+                    }
+                    
+         
+                    
+                }
+                
+            }
+        }
+    }
 }
 
 extension MainController : UICollectionViewDataSource, UICollectionViewDelegate {

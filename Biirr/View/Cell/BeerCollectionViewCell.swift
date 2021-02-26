@@ -21,16 +21,12 @@ final class BeerCollectionViewCell: UICollectionViewCell {
     var beer:BeerViewModel? {
         
         didSet {
+            
             if let beer  = beer {
                 
                 beerName.text = beer.getBeerName()
                 beerCategory.text = beer.getCategory()
-                
-                if let image = beer.getListDisplayImage()
-                {
-                    beerImage.sd_setImage(with: image)
-                }
-
+                beerImage.setFromUrl(url: beer.getListDisplayImage())
                 
             }
             
@@ -40,6 +36,7 @@ final class BeerCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         
+        beerImage.image = nil
         beerImage.sd_cancelCurrentImageLoad()
     }
     
