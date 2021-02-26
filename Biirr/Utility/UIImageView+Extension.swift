@@ -12,7 +12,7 @@ extension UIImageView {
     
     func setFromUrl(url : URL?)  {
         
-        if let url = url {  
+        if let url = url {
             self.sd_setImage(with: url)
         }
         else{

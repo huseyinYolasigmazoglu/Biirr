@@ -10,13 +10,9 @@ import SDWebImage
 
 final class BeerCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet private  weak var beerName: UILabel!
-    
-    @IBOutlet weak var beerCategory: UILabel!
-    
-    @IBOutlet weak var beerImage: UIImageView!
-    
-    
+    @IBOutlet private weak var beerName: UILabel!
+    @IBOutlet private weak var beerCategory: UILabel!
+    @IBOutlet private weak var beerImage: UIImageView!
     
     var beer:BeerViewModel? {
         
@@ -27,9 +23,7 @@ final class BeerCollectionViewCell: UICollectionViewCell {
                 beerName.text = beer.getBeerName()
                 beerCategory.text = beer.getCategory()
                 beerImage.setFromUrl(url: beer.getListDisplayImage())
-                
             }
-            
         }
     }
     
@@ -39,6 +33,4 @@ final class BeerCollectionViewCell: UICollectionViewCell {
         beerImage.image = nil
         beerImage.sd_cancelCurrentImageLoad()
     }
-    
-    
 }

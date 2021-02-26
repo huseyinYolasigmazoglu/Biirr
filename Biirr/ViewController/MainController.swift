@@ -10,9 +10,8 @@ import UIKit
 final class MainController: UIViewController{
     
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     private var webService : IWebService = WebService()
     private var beerService: IBeerService!
@@ -86,8 +85,6 @@ extension MainController : UICollectionViewDataSource, UICollectionViewDelegate 
         
         return cell
     }
-    
-    
 }
 
 extension MainController : UICollectionViewDelegateFlowLayout {

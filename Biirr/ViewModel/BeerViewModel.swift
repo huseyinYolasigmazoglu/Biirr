@@ -64,7 +64,5 @@ struct BeerViewModel {
         else {
             return ""
         }
-        
-       
     }
 }
