@@ -25,6 +25,7 @@
 		522B245825E68E85009DED71 /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B245725E68E85009DED71 /* BeerService.swift */; };
 		522B246125E6931D009DED71 /* Beers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B246025E6931D009DED71 /* Beers.swift */; };
 		522B246825E6DEEF009DED71 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B246725E6DEEF009DED71 /* Resources.swift */; };
+		528E0DFA25EA3FE000555E26 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 528E0DF925EA3FE000555E26 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,7 @@
 		522B245725E68E85009DED71 /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
 		522B246025E6931D009DED71 /* Beers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beers.swift; sourceTree = "<group>"; };
 		522B246725E6DEEF009DED71 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		528E0DF925EA3FE000555E26 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		95E08939DD91CBE33A7CFFFE /* Pods-Biirr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biirr.release.xcconfig"; path = "Target Support Files/Pods-Biirr/Pods-Biirr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 		522B242725E67860009DED71 = {
 			isa = PBXGroup;
 			children = (
+				528E0DF925EA3FE000555E26 /* README.md */,
 				522B243225E67860009DED71 /* Biirr */,
 				522B243125E67860009DED71 /* Products */,
 				90F8190CE1F7E204D9DD244A /* Pods */,
@@ -254,6 +257,7 @@
 			files = (
 				522B244025E67862009DED71 /* LaunchScreen.storyboard in Resources */,
 				522B243D25E67862009DED71 /* Assets.xcassets in Resources */,
+				528E0DFA25EA3FE000555E26 /* README.md in Resources */,
 				522B243B25E67860009DED71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
